@@ -18,7 +18,7 @@ def process_target_csv(filepath: str, start_time: str = "2024-01-01"):
         out_df.to_csv(output_dir / f"{col_number}.csv", index=False)
 
 if __name__ == "__main__":
-  data_dir = Path("data_code/data")
+  data_dir = Path("raw-data")
   for csv_file in sorted(data_dir.glob("*.csv")):
       process_target_csv(csv_file)
     
